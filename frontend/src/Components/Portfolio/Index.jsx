@@ -21,48 +21,25 @@ const Index = () => {
       icon: 'fa-brands fa-java'
     },
     {
-      name: 'React',
-      icon: 'fab fa-react',
-      description: 'Modern UI library'
+      name: 'C',
     },
     {
-      name: 'JavaScript',
-      icon: 'fab fa-js-square',
-      description: 'ES6+ & DOM manipulation'
+      name: 'C++'
     },
     {
-      name: 'HTML5',
-      icon: 'fab fa-html5',
-      description: 'Semantic markup'
+      name: 'Nmap'
     },
     {
-      name: 'CSS3',
-      icon: 'fab fa-css3-alt',
-      description: 'Responsive design'
+      name: 'Burp Suite'
     },
     {
-      name: 'Node.js',
-      icon: 'fab fa-node-js',
-      description: 'Server-side JavaScript'
+      name: 'Metasploit'
     },
     {
-      name: 'Express',
-      icon: 'fas fa-server',
-      description: 'Web framework'
+      name: 'Wireshark'
     },
     {
-      name: 'MongoDB',
-      icon: 'fas fa-database',
-      description: 'NoSQL database'
-    },
-    {
-      name: 'Kotlin',
-      icon: 'fab fa-kotlin',
-      description: 'Programming language'
-    },
-    {
-      name: 'XML',
-      description: 'Markup language'
+      name: 'Nessus'
     },
     {
       name: 'Git',
@@ -79,11 +56,6 @@ const Index = () => {
       icon: 'fas fa-code',
       description: 'Code editor'
     },
-    {
-      name: 'Cursor',
-      icon: 'fas fa-cursor',
-      description: 'Code editor'
-    }
   ]
   const [project, setProject] = useState([])
   const [certificate, setCertificate] = useState([])
