@@ -1,0 +1,656 @@
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 222.2 84% 4.9%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 222.2 84% 4.9%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 222.2 84% 4.9%;
+
+        --primary: 262 83% 58%;
+        --primary-foreground: 0 0% 100%;
+        --primary-glow: 262 100% 70%;
+
+        --secondary: 210 40% 96.1%;
+        --secondary-foreground: 222.2 47.4% 11.2%;
+
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+
+        --accent: 198 93% 60%;
+        --accent-foreground: 0 0% 100%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 100%;
+
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+        --ring: 262 83% 58%;
+
+        /* Custom design tokens for light theme */
+        --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+        --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(198 93% 70%));
+        --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(210 20% 98%));
+
+        --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.15);
+        --shadow-card: 0 4px 16px -4px hsl(220 13% 69% / 0.3);
+        --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.2);
+
+        --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+        --radius: 0.5rem;
+
+        --sidebar-background: 0 0% 98%;
+
+        --sidebar-foreground: 240 5.3% 26.1%;
+
+        --sidebar-primary: 240 5.9% 10%;
+
+        --sidebar-primary-foreground: 0 0% 98%;
+
+        --sidebar-accent: 240 4.8% 95.9%;
+
+        --sidebar-accent-foreground: 240 5.9% 10%;
+
+        --sidebar-border: 220 13% 91%;
+
+        --sidebar-ring: 217.2 91.2% 59.8%;
+    }
+
+    .dark {
+        --background: 222.2 84% 4.9%;
+        --foreground: 210 40% 98%;
+
+        --card: 222.2 84% 4.9%;
+        --card-foreground: 210 40% 98%;
+
+        --popover: 222.2 84% 4.9%;
+        --popover-foreground: 210 40% 98%;
+
+        --primary: 210 40% 98%;
+        --primary-foreground: 222.2 47.4% 11.2%;
+
+        --secondary: 217.2 32.6% 17.5%;
+        --secondary-foreground: 210 40% 98%;
+
+        --muted: 217.2 32.6% 17.5%;
+        --muted-foreground: 215 20.2% 65.1%;
+
+        --accent: 217.2 32.6% 17.5%;
+        --accent-foreground: 210 40% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 210 40% 98%;
+
+        --border: 217.2 32.6% 17.5%;
+        --input: 217.2 32.6% 17.5%;
+        --ring: 212.7 26.8% 83.9%;
+        --sidebar-background: 240 5.9% 10%;
+        --sidebar-foreground: 240 4.8% 95.9%;
+        --sidebar-primary: 224.3 76.3% 48%;
+        --sidebar-primary-foreground: 0 0% 100%;
+        --sidebar-accent: 240 3.7% 15.9%;
+        --sidebar-accent-foreground: 240 4.8% 95.9%;
+        --sidebar-border: 240 3.7% 15.9%;
+        --sidebar-ring: 217.2 91.2% 59.8%;
+    }
+}
+
+/* ProjectManager Styles - Light Theme */
+.projectManager {
+    min-height: 100vh;
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: hsl(var(--muted-foreground));
+    font-weight: 300;
+}
+
+/* Form Styles */
+.formContainer {
+    margin-bottom: 4rem;
+}
+
+.projectForm {
+    background: var(--gradient-card);
+    border: 1px solid hsl(var(--border));
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-smooth);
+}
+
+.projectForm:hover {
+    box-shadow: var(--shadow-elegant);
+    transform: translateY(-2px);
+}
+
+.formTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: hsl(var(--primary));
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.formLabel {
+    display: block;
+    font-weight: 500;
+    color: hsl(var(--foreground));
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.formInput,
+.formTextarea {
+    width: 94%;
+    padding: 0.75rem 1rem;
+    background: hsl(var(--background));
+    border: 2px solid hsl(var(--border));
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: hsl(var(--foreground));
+    transition: var(--transition-smooth);
+}
+
+.formInput:focus,
+.formTextarea:focus {
+    outline: none;
+    border-color: hsl(var(--primary));
+    box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
+}
+
+.formTextarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Technology Input */
+.techInputContainer {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.techInput {
+    flex: 1;
+}
+
+.addTechBtn {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addTechBtn:hover:not(:disabled) {
+    background: hsl(var(--primary-glow));
+    transform: scale(1.05);
+}
+
+.addTechBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.techTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.techTag {
+    background: var(--gradient-accent);
+    color: hsl(var(--accent-foreground));
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: slide-up 0.3s ease-out;
+}
+
+.removeTechBtn {
+    background: none;
+    border: none;
+    color: hsl(var(--accent-foreground));
+    cursor: pointer;
+    padding: 0;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+}
+
+.removeTechBtn:hover {
+    background: hsl(var(--destructive));
+    color: hsl(var(--destructive-foreground));
+}
+
+/* File Upload Styles */
+.fileUploadContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.fileInput {
+    display: none;
+}
+
+.fileUploadLabel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: 2px dashed hsl(var(--border));
+    border-radius: 0.5rem;
+    background: hsl(var(--muted) / 0.3);
+    color: hsl(var(--muted-foreground));
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    font-weight: 500;
+}
+
+.fileUploadLabel:hover {
+    border-color: hsl(var(--primary));
+    background: hsl(var(--primary) / 0.05);
+    color: hsl(var(--primary));
+}
+
+.imagePreview {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 2px solid hsl(var(--border));
+    background: hsl(var(--muted));
+}
+
+.imagePreview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.removeImageBtn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: hsl(var(--destructive));
+    color: hsl(var(--destructive-foreground));
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    box-shadow: 0 2px 8px hsl(0 0% 0% / 0.2);
+}
+
+.removeImageBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px hsl(0 0% 0% / 0.3);
+}
+
+/* Form Actions */
+.formActions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.submitBtn,
+.cancelBtn {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition-bounce);
+}
+
+.submitBtn {
+    background: var(--gradient-primary);
+    color: hsl(var(--primary-foreground));
+}
+
+.submitBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elegant);
+}
+
+.cancelBtn {
+    background: hsl(var(--secondary));
+    color: hsl(var(--secondary-foreground));
+    border: 1px solid hsl(var(--border));
+}
+
+.cancelBtn:hover {
+    background: hsl(var(--muted));
+    transform: translateY(-2px);
+}
+
+/* Projects Section */
+.projectsSection {
+    margin-top: 4rem;
+}
+
+.projectsTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: hsl(var(--primary));
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Project Card */
+.projectCard {
+    background: var(--gradient-card);
+    border: 1px solid hsl(var(--border));
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    animation: fade-in 0.4s ease-out;
+}
+
+.projectCard:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-elegant);
+    border-color: hsl(var(--primary) / 0.5);
+}
+
+.projectImage {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: hsl(var(--muted));
+    position: relative;
+}
+
+.projectImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.projectCard:hover .projectImage img {
+    transform: scale(1.05);
+}
+
+.projectContent {
+    padding: 1.5rem;
+}
+
+.projectTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: hsl(var(--foreground));
+    margin-bottom: 0.75rem;
+}
+
+.projectDescription {
+    color: hsl(var(--muted-foreground));
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.projectTechnologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.techChip {
+    background: hsl(var(--primary) / 0.1);
+    color: hsl(var(--primary));
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid hsl(var(--primary) / 0.3);
+}
+
+.projectLinks {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.projectLink {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: var(--transition-smooth);
+}
+
+.githubLink {
+    background: hsl(var(--secondary));
+    color: hsl(var(--secondary-foreground));
+    border: 1px solid hsl(var(--border));
+}
+
+.githubLink:hover {
+    background: hsl(var(--muted));
+    transform: translateY(-2px);
+}
+
+.liveLink {
+    background: var(--gradient-accent);
+    color: hsl(var(--accent-foreground));
+}
+
+.liveLink:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px hsl(var(--accent) / 0.3);
+}
+
+.projectActions {
+    display: flex;
+    gap: 1rem;
+}
+
+.actionBtn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.editBtn {
+    background: hsl(var(--accent) / 0.1);
+    color: hsl(var(--accent));
+    border: 1px solid hsl(var(--accent) / 0.3);
+}
+
+.editBtn:hover {
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+    transform: translateY(-2px);
+}
+
+.deleteBtn {
+    background: hsl(var(--destructive) / 0.1);
+    color: hsl(var(--destructive));
+    border: 1px solid hsl(var(--destructive) / 0.3);
+}
+
+.deleteBtn:hover {
+    background: hsl(var(--destructive));
+    color: hsl(var(--destructive-foreground));
+    transform: translateY(-2px);
+}
+
+/* Empty State */
+.emptyState {
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-top: 2rem;
+}
+
+.emptyContent h3 {
+    font-size: 1.5rem;
+    color: hsl(var(--muted-foreground));
+    margin-bottom: 0.5rem;
+}
+
+.emptyContent p {
+    color: hsl(var(--muted-foreground));
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projectManager {
+        padding: 1rem 0.5rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .projectForm {
+        padding: 1.5rem;
+    }
+
+    .projectsGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .formActions {
+        flex-direction: column;
+    }
+
+    .submitBtn,
+    .cancelBtn {
+        width: 100%;
+    }
+
+    .projectLinks {
+        flex-direction: column;
+    }
+
+    .projectActions {
+        flex-direction: column;
+    }
+
+    .techInputContainer {
+        flex-direction: column;
+    }
+
+    .addTechBtn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    .projectForm {
+        padding: 1rem;
+    }
+
+    .projectContent {
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .techTags {
+        justify-content: center;
+    }
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+    .projectCard {
+        backdrop-filter: blur(10px);
+    }
+
+    .formInput:focus,
+    .formTextarea:focus {
+        box-shadow: 0 0 0 3px hsl(var(--primary-glow) / 0.2);
+    }
+}

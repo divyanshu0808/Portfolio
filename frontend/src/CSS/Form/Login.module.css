@@ -1,0 +1,230 @@
+.loginContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+.loginFormContainer {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.loginTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+.loginSubtitle {
+  font-size: 16px;
+  color: #718096;
+  margin: 0 0 32px 0;
+  text-align: center;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 4px;
+}
+
+.inputField {
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+  color: #2d3748;
+  font-family: inherit;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.inputField:hover {
+  border-color: #cbd5e0;
+}
+
+.inputField:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.inputField::placeholder {
+  color: #a0aec0;
+}
+
+.inputError {
+  border-color: #e53e3e !important;
+  background-color: #fed7d7 !important;
+}
+
+.inputError:focus {
+  border-color: #e53e3e !important;
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1) !important;
+}
+
+.errorMessage {
+  font-size: 12px;
+  color: #e53e3e;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.loginButton {
+  padding: 14px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #667eea;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+  font-family: inherit;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.loginButton:hover:not(:disabled) {
+  background-color: #5a67d8;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.loginButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.buttonDisabled {
+  background-color: #a0aec0 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.loginFooter {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.loginLink {
+  font-size: 14px;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.loginLink:hover {
+  text-decoration: underline;
+  color: #5a67d8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .loginContainer {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .loginContainer {
+    padding: 15px;
+  }
+
+  .loginFormContainer {
+    padding: 30px 20px;
+  }
+
+  .loginTitle {
+    font-size: 24px;
+  }
+
+  .inputField {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .loginFormContainer {
+    padding: 20px 15px;
+  }
+
+  .loginTitle {
+    font-size: 22px;
+  }
+
+  .loginSubtitle {
+    font-size: 14px;
+  }
+}
+
+@media (hover: none) {
+  .loginButton:hover {
+    background-color: #667eea;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .inputField {
+    border-color: #000000;
+  }
+
+  .inputField:focus {
+    border-color: #0000ff;
+  }
+
+  .loginButton {
+    border: 2px solid #000000;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+@media print {
+  .loginContainer {
+    background: white;
+    min-height: auto;
+  }
+
+  .loginFormContainer {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+}
