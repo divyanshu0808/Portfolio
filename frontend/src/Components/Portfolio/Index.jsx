@@ -18,28 +18,43 @@ const Index = () => {
   const skills = [
     {
       name: 'Java',
-      icon: 'fa-brands fa-java'
+      icon: 'fa-brands fa-java',
+      description: ''
     },
     {
       name: 'C',
+      icon: '',
+      description: ''
     },
     {
-      name: 'C++'
+      name: 'C++',
+      icon: '',
+      description: ''
     },
     {
-      name: 'Nmap'
+      name: 'Nmap',
+      icon: '',
+      description: ''
     },
     {
-      name: 'Burp Suite'
+      name: 'Burp Suite',
+      icon: '',
+      description: ''
     },
     {
-      name: 'Metasploit'
+      name: 'Metasploit',
+      icon: '',
+      description: ''
     },
     {
-      name: 'Wireshark'
+      name: 'Wireshark',
+      icon: '',
+      description: ''
     },
     {
-      name: 'Nessus'
+      name: 'Nessus',
+      icon: '',
+      description: ''
     },
     {
       name: 'Git',
