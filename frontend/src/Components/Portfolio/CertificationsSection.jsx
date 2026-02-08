@@ -18,14 +18,14 @@ const CertificationsSection = ({ certifications }) => {
         </div>
 
         <div className="certifications-grid">
-          {certifications.map((cert, index) => (
+          {certifications.map((cert, index) => cert && (
             <CertificationCard
               key={index}
-              name={cert.name}
-              image={cert.image}
-              platform={cert.platform}
-              skills={cert.skills}
-              link={cert.link}
+              name={cert?.name}
+              image={cert?.image}
+              platform={cert?.platform}
+              skills={cert?.skills}
+              link={cert?.link}
               isVisible={isVisible}
               delay={index * 0.1}
             />

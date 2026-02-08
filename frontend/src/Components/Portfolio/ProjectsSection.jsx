@@ -44,15 +44,15 @@ const ProjectsSection = ({ projects }) => {
               className="carousel-track"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-              {projectsData.map((project, index) => (
+              {projectsData.map((project, index) => project && (
                 <div key={index} className="carousel-slide">
                   <ProjectCard
-                    title={project.title}
-                    description={project.description}
-                    image={project.image}
-                    technologies={project.technologies}
-                    githubUrl={project.githubUrl}
-                    liveUrl={project.liveUrl}
+                    title={project?.title}
+                    description={project?.description}
+                    image={project?.image}
+                    technologies={project?.technologies}
+                    githubUrl={project?.githubUrl}
+                    liveUrl={project?.liveUrl}
                   />
                 </div>
               ))}

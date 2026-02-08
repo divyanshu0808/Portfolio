@@ -35,13 +35,13 @@ const ExperienceSection = ({ experiences }) => {
         </div>
 
         <div className="experience-timeline">
-          {experiences && experiences.map((exp, index) => (
+          {experiences && experiences.map((exp, index) => exp && (
             <TimelineItem
               key={index}
               title={exp.role}
               subtitle={exp.company}
               period={`${formatDuration(exp.startDate, exp.endDate)}`}
-              description={exp.description}
+              description={exp?.description}
               isLast={index === experiences.length - 1}
               isVisible={isVisible}
               delay={index * 0.2}

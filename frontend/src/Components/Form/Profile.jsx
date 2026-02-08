@@ -75,7 +75,9 @@ const UserProfileForm = () => {
         }
 
         axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/fetch`).then((res) => {
-            setFormData(res.data.profile[0])
+            if (res.data.profile && res.data.profile.length > 0) {
+                setFormData(res.data.profile[0])
+            }
         }).catch((err) => {
             console.log("err", err)
         })

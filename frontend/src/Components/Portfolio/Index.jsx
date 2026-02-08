@@ -92,7 +92,7 @@ const Index = () => {
 
       try {
         const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/fetch`)
-        setProfile(res.data.profile?.[0] || null)
+        setProfile(res.data.profile?.[0] || {})
         setExperience(res.data.experience || [])
         setProject(res.data.project || [])
         setCertificate(res.data.certificate || [])
@@ -122,7 +122,7 @@ const Index = () => {
       </div>
       <main className={`${loading ? 'hidden' : ''}`}>
         <ProfileSection data={profile} />
-        <ObjectiveSection objective={profile.description} />
+        <ObjectiveSection objective={profile?.description} />
         <Skills skillsData={skills} />
         <ExperienceSection experiences={experience} />
         <ProjectsSection projects={project} />
