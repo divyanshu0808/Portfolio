@@ -23,7 +23,7 @@ const ProfileSection = ({ data }) => {
             </h1>
 
             <TypingEffect
-              texts={['Full Stack Web Developer', 'Android Developer', 'Full Stack Web Developer']}
+              texts={['Cyber Security', 'Ethical Hacker']}
               speed={100}
               deleteSpeed={50}
               pauseTime={2000}
